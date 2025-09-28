@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Happy Pets - Inicio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+		rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="icon" type="logo" href="assets/img/Logo.jpg.jpeg">
+</head>
+
+<body>
+	<header class="main-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<div class="logo">
+					<!-- Aquí puedes cambiar la imagen por la tuya -->
+					<img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+				</div>
+				<div class="brand-info">
+					<h1 class="brand-text">Happy Pets</h1>
+					<p class="slogan">Productos y Servicios para tus mascotas</p>
+				</div>
+			</div>
+			<nav class="navbar">
+				<a href="#inicio">Inicio</a>
+				<a href="#productos">Productos</a>
+				<a href="#services">Servicios</a>
+				<a href="#nosotros">Quiénes Somos</a>
+				<a href="./admin/index.html
+				
+				">CRUD</a>
+				<a href="#login" class="btn contact-btn">Inicio Sesión</a>
+			</nav>
+
+            <!-- CART: botón del carrito (añadido) -->
+            <button id="cart-button" class="cart-btn" aria-label="Ver carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+
+			<button class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">☰</button>
+		</div>
+	</header>
+    <aside class="hero-aside">
+				<div class="hero-card">
+					<h3>Oferta del día</h3>
+					<div class="card">
+						<img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM (1).jpeg" alt="Combo Snacks">
+						<h4>Combo Snacks Premium</h4>
+						<p class="small">Snacks naturales para perros y gatos, elaborados con ingredientes frescos.</p>
+						<a class="btn" href="#productos"
+							style="display:inline-block; margin-top:15px; padding:10px 20px; background:var(--accent); color:white; text-decoration:none; border-radius:25px; font-weight:600;">Ver
+							productos</a>
+					</div>
+				</div>
+			</aside>
+		</section>
+
+		<section class="banner">
+			<div class="content-banner">
+				<h2>Happy Pets Premium</h2>
+				<div class="position">
+					Los mejores productos para el cuidado y bienestar de tus mascotas.<br>
+					Alimentos premium, juguetes seguros y accesorios de calidad<br>
+					para que tu mejor amigo tenga una vida plena y saludable.<br>
+					¡Todo lo que necesitas para hacer feliz a tu mascota!
+				</div>
+				<button class="button" id="productos">
+					<div class="text">Ver Productos</div>
+				</button>
+			</div>
+		</section>
+
+		<section class="container top-categories">
+			<h1 class="heading-1">Categorías</h1>
+			<div class="container-categories">
+				<div class="card-category category-hombre">
+					<p>Para Perros</p>
+					<span><a href="#perros">Ver más</a></span>
+				</div>
+				<div class="card-category category-mujer">
+					<p>Para Gatos</p>
+					<span><a href="#gatos">Ver más</a></span>
+				</div>
+			</div>
+		</section>
+
+		<section class="container top-products" id="productos">
+			<h1 class="heading-1">Catálogo de Productos</h1>
+			<div class="container-options">
+				<span class="active">Destacados</span>
+				<span>Más recientes</span>
+				<span>Mejores Vendidos</span>
+			</div>
+			<div class="container-products">
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&h=300&fit=crop"
+							alt="Alimento Premium para Perros">
+						<span class="discount">-15%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Alimento Premium Perros</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$85.000 <span>$100.000</span></p>
+					</div>
+				</div>
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=400&h=300&fit=crop"
+							alt="Juguete Interactivo para Gatos">
+						<span class="discount">-20%</span>
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Juguete Interactivo</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$45.000 <span>$56.000</span></p>
+					</div>
+				</div>
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop"
+							alt="Cama Cómoda para Mascotas">
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+						<h3>Cama Comfort Plus</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$120.000</p>
+					</div>
+				</div>
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop"
+							alt="Kit de Aseo para Mascotas">
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Kit de Aseo Completo</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$78.000</p>
+					</div>
+				</div>
+				<div class="card-product">
+					<div class="container-img">
+						<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop"
+							alt="Kit de Aseo para Mascotas">
+						<div class="button-group">
+							<span><i class="fa-regular fa-eye"></i></span>
+							<span><i class="fa-regular fa-heart"></i></span>
+							<span><i class="fa-solid fa-code-compare"></i></span>
+						</div>
+					</div>
+					<div class="content-card-product">
+						<div class="stars">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-regular fa-star"></i>
+						</div>
+						<h3>Kit de Aseo Completo</h3>
+						<span class="add-cart">
+							<i class="fa-solid fa-basket-shopping"></i>
+						</span>
+						<p class="price">$78.000</p>
+					</div>
+			</div>
+		</section>
+		
+
+<section class="container specials">
+  <h1 class="heading-1">Nuevos Productos para tu Perro</h1>
+  <div class="container-products">
+    
+    <!-- Producto 1 -->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="assets/img/Juguete de Cuerda color Rosa con Verde para Mascota con Pelota de Tenis.jpg" alt="Juguete para perros">
+        <span class="discount">-15%</span>
+        <div class="button-group">
+          <span><i class="fa-regular fa-eye"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3>Juguete Mordedor</h3>
+        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+        <p class="price">$25.000 <span>$30.000</span></p>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="assets/img/¿Nutro o alimento a mi mascota_.jpg" alt="Comida para perros">
+        <span class="discount">-20%</span>
+        <div class="button-group">
+          <span><i class="fa-regular fa-eye"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3>Comida Premium</h3>
+        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+        <p class="price">$120.000 <span>$150.000</span></p>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="assets/img/Cama Rectangular de Lujo Lunics Grande color Cocoa.jpg" alt="Cama para perros">
+        <span class="discount">-25%</span>
+        <div class="button-group">
+          <span><i class="fa-regular fa-eye"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h3>Cama Acolchada</h3>
+        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+        <p class="price">$180.000 <span>$240.000</span></p>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="assets/img/Collar Para Perros Impermeable_ Ajustable, Resistente Al.jpg" alt="Collar para perros">
+        <div class="button-group">
+          <span><i class="fa-regular fa-eye"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3>Collar Ajustable</h3>
+        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+        <p class="price">$45.000</p>
+      </div>
+    </div>
+
+	 <!-- Producto 5 -->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="assets/img/imagen1.jpg" alt="Comida para perros">
+        <span class="discount">-20%</span>
+        <div class="button-group">
+          <span><i class="fa-regular fa-eye"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3>Vestido Perro</h3>
+        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+        <p class="price">$12.000 <span>$15.000</span></p>
+      </div>
+    </div>
+	 <!-- Producto 6-->
+    <div class="card-product">
+      <div class="container-img">
+        <img src="assets/img/¿Nutro o alimento a mi mascota_.jpg" alt="Comida para perros">
+        <span class="discount">-20%</span>
+        <div class="button-group">
+          <span><i class="fa-regular fa-eye"></i></span>
+          <span><i class="fa-regular fa-heart"></i></span>
+          <span><i class="fa-solid fa-code-compare"></i></span>
+        </div>
+      </div>
+      <div class="content-card-product">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h3>Rascador</h3>
+        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+        <p class="price">$20.000 <span>$10.000</span></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+ <!-- CART: panel del carrito -->
+    <aside id="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <strong>Tu carrito</strong>
+        <div>
+          <button id="cart-clear" class="btn-secondary" title="Vaciar carrito">Vaciar</button>
+          <button id="cart-close" class="btn-secondary" title="Cerrar">Cerrar</button>
+        </div>
+      </div>
+      <div class="cart-body">
+        <div id="cart-items"></div>
+        <div id="cart-empty" class="cart-empty" style="display:none;">Tu carrito está vacío</div>
+      </div>
+      <div class="cart-footer">
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;"><strong>Total:</strong><strong id="cart-total">$0</strong></div>
+        <div class="cart-actions">
+          <button id="checkout-btn" class="btn-primary">Finalizar compra</button>
+          <button id="close-btn-2" class="btn-secondary">Seguir comprando</button>
+        </div>
+      </div>
+      	<footer class="footer" id="contacto">
+		<div class="container container-footer">
+			<div class="menu-footer">
+				<div class="logo-1">
+					<img src="/assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+				</div>
+				<div class="contact-info">
+					<p class="title-footer">Información de Contacto</p>
+					<ul>
+						<li>Dirección: Veracruz Manzana 10</li>
+						<li>Teléfono: 3234339389</li>
+						<li>Email: Happypets@support.com</li>
+					</ul>
+					<div class="social-icons">
+						<span class="facebook">
+							<i class="fa-brands fa-facebook-f"></i>
+						</span>
+						<span class="twitter">
+							<i class="fa-brands fa-twitter"></i>
+						</span>
+						<span class="youtube">
+							<i class="fa-brands fa-youtube"></i>
+						</span>
+						<span class="pinterest">
+							<i class="fa-brands fa-pinterest-p"></i>
+						</span>
+						<span class="instagram">
+							<i class="fa-brands fa-instagram"></i>
+						</span>
+					</div>
+				</div>
+				<div class="information">
+					<p class="title-footer">Información</p>
+					<ul>
+						<li><a href="#nosotros">Acerca de Nosotros</a></li>
+						<li><a href="#privacidad">Políticas de Privacidad</a></li>
+						<li><a href="#terminos">Términos y condiciones</a></li>
+						<li><a href="#contacto">Contáctanos</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>

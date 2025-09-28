@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Happy Pets - Inicio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+		rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+	<header class="main-header">
+		<div class="container header-inner">
+			<div class="brand">
+				<div class="logo">
+					<!-- Aquí puedes cambiar la imagen por la tuya -->
+					<img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+				</div>
+				<div class="brand-info">
+					<h1 class="brand-text">Happy Pets</h1>
+					<p class="slogan">Productos y Servicios para tus mascotas</p>
+				</div>
+			</div>
+			<nav class="navbar">
+				<a href="index.html">Inicio</a>
+				<a href="productos.html">Productos</a>
+				<a href="services.html">Servicios</a>
+				<a href="nosotros.html">Quiénes Somos</a>
+				<a href="./admin/index.html
+				
+				">CRUD</a>
+				<a href="#login" class="btn contact-btn">Inicio Sesión</a>
+			</nav>
+
+            <!-- CART: botón del carrito (añadido) -->
+            <button id="cart-button" class="cart-btn" aria-label="Ver carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+
+			<button class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">☰</button>
+		</div>
+	</header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-services">
+            <div class="container">
+                <h1>Servicios Profesionales</h1>
+                <p>Cuidado especializado para el bienestar completo de tus mascotas con los mejores profesionales</p>
+                <button class="hero-button" onclick="scrollToServices()">Ver Servicios</button>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Ofrecemos una amplia gama de servicios profesionales para mantener a tus mascotas saludables y felices</p>
+
+                <div class="services-grid">
+                    <!-- Servicio 1: Veterinaria -->
+                    <div class="service-card">
+                        <div class="service-image">🏥</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Consulta Veterinaria</h3>
+                            <p class="service-description">Atención médica completa con veterinarios especializados para el diagnóstico y tratamiento de tu mascota.</p>
+                            <ul class="service-features">
+                                <li>Consulta general y especializada</li>
+                                <li>Vacunación completa</li>
+                                <li>Exámenes médicos preventivos</li>
+                                <li>Diagnóstico por imágenes</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-text">Desde</span>
+                                <span class="price-amount">$45.00</span>
+                            </div>
+                            <button class="service-button">Agendar Cita</button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Peluquería -->
+                    <div class="service-card">
+                        <div class="service-image">✂️</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Peluquería y Estética</h3>
+                            <p class="service-description">Servicios completos de belleza y cuidado estético para mantener a tu mascota limpia y hermosa.</p>
+                            <ul class="service-features">
+                                <li>Baño con productos premium</li>
+                                <li>Corte de pelo profesional</li>
+                                <li>Limpieza de oídos y uñas</li>
+                                <li>Tratamientos especiales de piel</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-text">Desde</span>
+                                <span class="price-amount">$35.00</span>
+                            </div>
+                            <button class="service-button">Reservar Turno</button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Hotel Canino -->
+                    <div class="service-card">
+                        <div class="service-image">🏨</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Hotel para Mascotas</h3>
+                            <p class="service-description">Hospedaje seguro y confortable para tu mascota cuando necesites viajar o ausentarte.</p>
+                            <ul class="service-features">
+                                <li>Habitaciones cómodas y seguras</li>
+                                <li>Cuidado personalizado 24/7</li>
+                                <li>Actividades y ejercicio diario</li>
+                                <li>Alimentación según dieta</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-text">Por día</span>
+                                <span class="price-amount">$25.00</span>
+                            </div>
+                            <button class="service-button">Hacer Reserva</button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4: Entrenamiento -->
+                    <div class="service-card">
+                        <div class="service-image">🎾</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Entrenamiento Canino</h3>
+                            <p class="service-description">Educación y adiestramiento profesional para mejorar el comportamiento y obediencia de tu perro.</p>
+                            <ul class="service-features">
+                                <li>Obediencia básica y avanzada</li>
+                                <li>Corrección de comportamiento</li>
+                                <li>Socialización con otros perros</li>
+                                <li>Entrenamiento personalizado</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-text">Por sesión</span>
+                                <span class="price-amount">$60.00</span>
+                            </div>
+                            <button class="service-button">Iniciar Entrenamiento</button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 5: Guardería -->
+                    <div class="service-card">
+                        <div class="service-image">🏃</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Guardería Diaria</h3>
+                            <p class="service-description">Cuidado diurno para que tu mascota socialice, juegue y se ejercite mientras trabajas.</p>
+                            <ul class="service-features">
+                                <li>Supervisión profesional constante</li>
+                                <li>Grupos de juego por tamaño</li>
+                                <li>Actividades recreativas</li>
+                                <li>Horarios flexibles</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-text">Por día</span>
+                                <span class="price-amount">$20.00</span>
+                            </div>
+                            <button class="service-button">Inscribir Mascota</button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 6: Emergencias -->
+                    <div class="service-card">
+                        <div class="service-image">🚑</div>
+                        <div class="service-content">
+                            <h3 class="service-title">Atención de Emergencia</h3>
+                            <p class="service-description">Servicio veterinario de urgencia 24/7 para situaciones críticas que requieren atención inmediata.</p>
+                            <ul class="service-features">
+                                <li>Disponible 24 horas, 7 días</li>
+                                <li>Equipo médico especializado</li>
+                                <li>Cirugías de emergencia</li>
+                                <li>Unidad de cuidados intensivos</li>
+                            </ul>
+                            <div class="service-price">
+                                <span class="price-text">Consulta</span>
+                                <span class="price-amount">$80.00</span>
+                            </div>
+                            <button class="service-button">Llamar Ahora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>¿Necesitas más información?</h2>
+                <p>Contacta con nuestros expertos para encontrar el servicio perfecto para tu mascota</p>
+                <button class="cta-button">Contáctanos</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <strong>Happy Pets</strong>
+                <p class="small">Tu centro de confianza para el cuidado integral de mascotas.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">Quiénes somos</a>
+                <a href="services.html">Servicios</a>
+                <a href="productos.html">Productos</a>
+                <a href="contact.html">Contáctenos</a>
+            </div>
+            <div class="social">
+                <small>Síguenos en redes sociales</small>
+                <div class="icons">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="Twitter">TW</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle del menú móvil
+        function toggleNav() {
+            document.body.classList.toggle('nav-open');
+        }
+
+        // Smooth scroll a la sección de servicios
+        function scrollToServices() {
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Funcionalidad de los botones de servicio
+        document.querySelectorAll('.service-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const serviceTitle = e.target.closest('.service-card').querySelector('.service-title').textContent;
+                
+                // Cambiar texto del botón temporalmente
+                const originalText = e.target.textContent;
+                e.target.textContent = '✓ Contactado';
+                e.target.style.background = '#10b981';
+                
+                // Simular contacto
+                setTimeout(() => {
+                    alert(`¡Gracias por tu interés en ${serviceTitle}! Te contactaremos pronto.`);
+                    e.target.textContent = originalText;
+                    e.target.style.background = '';
+                }, 1000);
+            });
+        });
+
+        // CTA Button functionality
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            alert('¡Gracias por tu interés! Te redirigiremos a nuestra página de contacto.');
+            // window.location.href = 'contact.html';
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('nav-open');
+        });
+    </script>
+</body>
+</html>
