@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Happy Pets - Productos para Perros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="logo" href="assets/img/Logo.jpg.jpeg">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="logo">
+                    <img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-text">Happy Pets</h1>
+                    <p class="slogan">Productos para Perros</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <a href="index.html">Inicio</a>
+                <a href="productos-perros.html" class="active">Productos Perros</a>
+                <a href="productos-gatos.html">Productos Gatos</a>
+                <a href="index.html#services">Servicios</a>
+                <a href="index.html#nosotros">Quiénes Somos</a>
+                <a href="#contacto" class="btn contact-btn">Contacto</a>
+            </nav>
+
+            <!-- CART: botón del carrito -->
+            <button id="cart-button" class="cart-btn" aria-label="Ver carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+
+            <button class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section para Perros -->
+        <section class="hero-services" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <h1>🐕 Productos para Perros</h1>
+                <p>Todo lo que tu mejor amigo canino necesita para ser feliz y saludable</p>
+            </div>
+        </section>
+
+        <!-- Productos para Perros -->
+        <section class="top-products" id="productos-perros">
+            <h1 class="heading-1">Catálogo Completo para Perros</h1>
+            <div class="container-options">
+                <span class="active">Todos</span>
+                <span>Alimentación</span>
+                <span>Juguetes</span>
+                <span>Accesorios</span>
+                <span>Cuidado</span>
+            </div>
+
+            <div class="container-products">
+                <!-- Producto 1: Alimento Premium -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Alimento Premium para Perros">
+                        <span class="discount">-20%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Alimento Premium Royal Canin</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$120.000 <span>$150.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Juguete Mordedor -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Juguete Mordedor">
+                        <span class="discount">-15%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Juguete Mordedor Kong Classic</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$45.000 <span>$53.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Cama Ortopédica -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Cama Ortopédica">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Cama Ortopédica Memory Foam</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$180.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Collar Inteligente -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Collar Inteligente">
+                        <span class="discount">-25%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Collar GPS Inteligente</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$200.000 <span>$265.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Kit de Aseo -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Kit de Aseo">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Kit Aseo Completo Premium</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$85.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Transportadora -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Transportadora">
+                        <span class="discount">-10%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Transportadora Aérea Aprobada</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$150.000 <span>$167.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 7: Snacks Naturales -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Snacks Naturales">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Snacks Naturales Orgánicos</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$35.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 8: Correa Retráctil -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Correa Retráctil">
+                        <span class="discount">-12%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Correa Retráctil Profesional</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$68.000 <span>$77.000</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CART: panel del carrito -->
+    <aside id="cart-panel" aria-hidden="true">
+        <div class="cart-header">
+            <strong>Tu carrito</strong>
+            <div>
+                <button id="cart-clear" class="btn-secondary" title="Vaciar carrito">Vaciar</button>
+                <button id="cart-close" class="btn-secondary" title="Cerrar">Cerrar</button>
+            </div>
+        </div>
+        <div class="cart-body">
+            <div id="cart-items"></div>
+            <div id="cart-empty" class="cart-empty" style="display:none;">Tu carrito está vacío</div>
+        </div>
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                <strong>Total:</strong><strong id="cart-total">$0</strong>
+            </div>
+            <div class="cart-actions">
+                <button id="checkout-btn" class="btn-primary">Finalizar compra</button>
+                <button id="close-btn-2" class="btn-secondary">Seguir comprando</button>
+            </div>
+        </div>
+    </aside>
+
+    <footer class="footer" id="contacto">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="logo-1">
+                    <img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+                </div>
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>Dirección: Veracruz Manzana 10</li>
+                        <li>Teléfono: 3234339389</li>
+                        <li>Email: Happypets@support.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                        <span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+                        <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                </div>
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="index.html#nosotros">Acerca de Nosotros</a></li>
+                        <li><a href="#privacidad">Políticas de Privacidad</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#contacto">Contáctanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

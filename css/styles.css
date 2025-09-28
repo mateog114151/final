@@ -1,4 +1,4 @@
-		:root {
+:root {
 			--bg: #fff7fb;
 			--primary: #ffdfe8;
 			--accent: #ff85a2;
@@ -360,12 +360,36 @@
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 		}
 
-		/* Banner Section */
+		/* Banner Section - MODIFICADO PARA IMAGEN DE FONDO */
 		.banner {
-			background: linear-gradient(135deg, var(--accent), #ff6b8a);
+			/* 🎯 AQUÍ PUEDES AGREGAR TU IMAGEN DE FONDO */
+			background: 
+				linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(237, 119, 145, 0.8)),
+				url('/assets/img/pets-banner.jpg') center/cover no-repeat;
+			/* 
+			Ejemplo de uso:
+			background: 
+				linear-gradient(135deg, rgba(255, 133, 162, 0.8), rgba(255, 107, 138, 0.8)),
+				url('./assets/img/tu-imagen-de-fondo.jpg') center/cover no-repeat;
+			*/
+			
 			border-radius: var(--radius);
 			margin: 40px 0;
 			overflow: hidden;
+			position: relative;
+			min-height: 400px; /* Altura mínima para que se vea bien la imagen */
+		}
+
+		/* Agregar una capa de overlay opcional para mejor legibilidad del texto */
+		.banner::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, 0.2); /* Overlay sutil oscuro */
+			z-index: 1;
 		}
 
 		.content-banner {
@@ -375,12 +399,15 @@
 			text-align: center;
 			padding: 60px 30px;
 			color: white;
+			position: relative;
+			z-index: 2; /* Para que el contenido esté por encima del overlay */
 		}
 
 		.content-banner h2 {
 			font-size: 3rem;
 			margin: 0 0 20px 0;
 			font-weight: 800;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para mejor legibilidad */
 		}
 
 		.position {
@@ -388,6 +415,7 @@
 			margin-bottom: 30px;
 			max-width: 600px;
 			opacity: 0.95;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
 		}
 
 		.button {
@@ -866,12 +894,30 @@
 				align-items: center;
 				text-align: center;
 			}
+
+			/* Banner responsive */
+			.banner {
+				min-height: 300px;
+			}
+			
+			.content-banner {
+				padding: 40px 20px;
+			}
+			
+			.content-banner h2 {
+				font-size: 2rem;
+			}
+			
+			.position {
+				font-size: 1rem;
+			}
 		}
 
 		.small {
 			color: var(--muted);
 			font-size: 0.95rem;
 		}
+		
  /* Header */
         .main-header {
            
@@ -1411,7 +1457,13 @@
             border-radius: 10px;
         }
 
-        
+        .hero-nosotros {
+            background: linear-gradient(135deg, var(--primary) 0%, #ffffff 100%);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
         .hero-nosotros::before {
             content: '';

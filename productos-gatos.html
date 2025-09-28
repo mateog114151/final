@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Happy Pets - Productos para Gatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="logo" href="assets/img/Logo.jpg.jpeg">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="logo">
+                    <img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-text">Happy Pets</h1>
+                    <p class="slogan">Productos para Gatos</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <a href="index.html">Inicio</a>
+                <a href="productos-perros.html">Productos Perros</a>
+                <a href="productos-gatos.html" class="active">Productos Gatos</a>
+                <a href="index.html#services">Servicios</a>
+                <a href="index.html#nosotros">Quiénes Somos</a>
+                <a href="#contacto" class="btn contact-btn">Contacto</a>
+            </nav>
+
+            <!-- CART: botón del carrito -->
+            <button id="cart-button" class="cart-btn" aria-label="Ver carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </button>
+
+            <button class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section para Gatos -->
+        <section class="hero-services" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="container">
+                <h1>🐱 Productos para Gatos</h1>
+                <p>Todo lo que tu compañero felino necesita para una vida plena y divertida</p>
+            </div>
+        </section>
+
+        <!-- Productos para Gatos -->
+        <section class="top-products" id="productos-gatos">
+            <h1 class="heading-1">Catálogo Completo para Gatos</h1>
+            <div class="container-options">
+                <span class="active">Todos</span>
+                <span>Alimentación</span>
+                <span>Juguetes</span>
+                <span>Accesorios</span>
+                <span>Arena y Limpieza</span>
+            </div>
+
+            <div class="container-products">
+                <!-- Producto 1: Alimento Premium Gatos -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Alimento Premium para Gatos">
+                        <span class="discount">-18%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Alimento Premium Hills Felino</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$95.000 <span>$115.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Rascador Torre -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Rascador Torre">
+                        <span class="discount">-22%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Rascador Torre Gigante</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$125.000 <span>$160.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Arena Sanitaria Premium -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Arena Sanitaria">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Arena Aglomerante Premium</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$45.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 4: Juguete Interactivo -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Juguete Interactivo">
+                        <span class="discount">-30%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Juguete Ratón Robótico</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$55.000 <span>$78.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 5: Casa Iglú -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Casa Iglú">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Casa Iglú Acogedora</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$85.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 6: Fuente de Agua -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Fuente de Agua">
+                        <span class="discount">-15%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Fuente de Agua Automática</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$120.000 <span>$141.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 7: Snacks Felinos -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Snacks Felinos">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Snacks Naturales para Gatos</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$28.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 8: Transportadora Elegante -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Transportadora Elegante">
+                        <span class="discount">-20%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Transportadora Elegante Soft</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$95.000 <span>$118.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 9: Collar con Cascabel -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Collar con Cascabel">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Collar Ajustable con Cascabel</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$25.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 10: Hierba Gatera -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Hierba Gatera">
+                        <span class="discount">-25%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Kit Hierba Gatera Orgánica</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$18.000 <span>$24.000</span></p>
+                    </div>
+                </div>
+
+                <!-- Producto 11: Túnel de Juego -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Túnel de Juego">
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <h3>Túnel Plegable de Juego</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$42.000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 12: Cepillo Autolimpiante -->
+                <div class="card-product">
+                    <div class="container-img">
+                        <!-- 🎯 ESPACIO PARA IMAGEN: Cambia src por tu imagen -->
+                        <img src="RUTA_DE_TU_IMAGEN_AQUI" alt="Cepillo Autolimpiante">
+                        <span class="discount">-18%</span>
+                        <div class="button-group">
+                            <span><i class="fa-regular fa-eye"></i></span>
+                            <span><i class="fa-regular fa-heart"></i></span>
+                            <span><i class="fa-solid fa-code-compare"></i></span>
+                        </div>
+                    </div>
+                    <div class="content-card-product">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>Cepillo Autolimpiante Pro</h3>
+                        <span class="add-cart"><i class="fa-solid fa-basket-shopping"></i></span>
+                        <p class="price">$65.000 <span>$79.000</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CART: panel del carrito -->
+    <aside id="cart-panel" aria-hidden="true">
+        <div class="cart-header">
+            <strong>Tu carrito</strong>
+            <div>
+                <button id="cart-clear" class="btn-secondary" title="Vaciar carrito">Vaciar</button>
+                <button id="cart-close" class="btn-secondary" title="Cerrar">Cerrar</button>
+            </div>
+        </div>
+        <div class="cart-body">
+            <div id="cart-items"></div>
+            <div id="cart-empty" class="cart-empty" style="display:none;">Tu carrito está vacío</div>
+        </div>
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                <strong>Total:</strong><strong id="cart-total">$0</strong>
+            </div>
+            <div class="cart-actions">
+                <button id="checkout-btn" class="btn-primary">Finalizar compra</button>
+                <button id="close-btn-2" class="btn-secondary">Seguir comprando</button>
+            </div>
+        </div>
+    </aside>
+
+    <footer class="footer" id="contacto">
+        <div class="container container-footer">
+            <div class="menu-footer">
+                <div class="logo-1">
+                    <img src="./assets/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
+                </div>
+                <div class="contact-info">
+                    <p class="title-footer">Información de Contacto</p>
+                    <ul>
+                        <li>Dirección: Veracruz Manzana 10</li>
+                        <li>Teléfono: 3234339389</li>
+                        <li>Email: Happypets@support.com</li>
+                    </ul>
+                    <div class="social-icons">
+                        <span class="facebook"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="twitter"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="youtube"><i class="fa-brands fa-youtube"></i></span>
+                        <span class="pinterest"><i class="fa-brands fa-pinterest-p"></i></span>
+                        <span class="instagram"><i class="fa-brands fa-instagram"></i></span>
+                    </div>
+                </div>
+                <div class="information">
+                    <p class="title-footer">Información</p>
+                    <ul>
+                        <li><a href="index.html#nosotros">Acerca de Nosotros</a></li>
+                        <li><a href="#privacidad">Políticas de Privacidad</a></li>
+                        <li><a href="#terminos">Términos y condiciones</a></li>
+                        <li><a href="#contacto">Contáctanos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
