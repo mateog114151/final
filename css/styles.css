@@ -1012,7 +1012,9 @@
 
         /* Hero Section */
         .hero-services {
-            background: linear-gradient(135deg, var(--primary) 0%, #ffffff 100%);
+            background: 
+                linear-gradient(135deg, rgba(255, 223, 232, 0.85), rgba(255, 133, 162, 0.65)),
+                url('/assets/img/perros-banner.webp') center/cover no-repeat;
             padding: 80px 0;
             text-align: center;
             margin-bottom: 60px;
@@ -1060,7 +1062,7 @@
         /* Services Section */
         .services-section {
             padding: 60px 0;
-			background-image: url('/assets/img/imagen1.jpg');
+			background-color: var(--primary);
         }
 
         .section-title {
@@ -1379,7 +1381,8 @@
                 justify-content: center;
             }
         }
-		 /* NAVEGACIÓN FLOTANTE */
+
+        /* NAVEGACIÓN FLOTANTE */
         .floating-nav {
             position: fixed;
             top: 20px;
@@ -1458,26 +1461,13 @@
         }
 
         .hero-nosotros {
-            background: linear-gradient(135deg, var(--primary) 0%, #ffffff 100%);
+            background: 
+                linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,223,232,0.7)),
+                url('/assets/img/quienessomos.webp') center/cover no-repeat;
             padding: 100px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero-nosotros::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paws" patternUnits="userSpaceOnUse" width="50" height="50"><circle cx="20" cy="20" r="3" fill="rgba(255,133,162,0.1)"/><circle cx="30" cy="25" r="2" fill="rgba(255,133,162,0.1)"/><circle cx="35" cy="15" r="2" fill="rgba(255,133,162,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23paws)"/></svg>') repeat;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
         }
 
         .hero-nosotros h1 {
@@ -1485,10 +1475,11 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 20px;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--accent), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #111; /* Color negro */
+            background: none; /* Elimina el degradado anterior */
+            -webkit-background-clip: initial;
+            -webkit-text-fill-color: initial;
+            background-clip: initial;
         }
 
         .hero-nosotros p {
@@ -1741,3 +1732,73 @@
         .fade-in {
             animation: fadeInUp 0.8s ease-out;
         }
+
+        .about-card-full {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: var(--card);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.about-card-full .about-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-right: 30px;
+    box-shadow: 0 8px 30px rgba(255, 133, 162, 0.08);
+}
+
+.about-card-full h2 {
+    margin-top: 0;
+}
+
+.about-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.about-card .about-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: 0 8px 30px rgba(255, 133, 162, 0.08);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 900px) {
+    .about-card-full {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .about-card-full .about-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .about-grid-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+.objetivo-card {
+    background: linear-gradient(135deg, #ffe5b4 0%, #fff7fb 100%);
+}
+
+.mision-card {
+    background: linear-gradient(135deg, #b4eaff 0%, #fff7fb 100%);
+}
+
+.vision-card {
+    background: linear-gradient(135deg, #ffd6e0 0%, #fff7fb 100%);
+}
