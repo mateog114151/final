@@ -26,13 +26,26 @@
         </div>
       </div>
       <nav class="navbar">
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#services">Servicios</a>
-        <a href="#nosotros">Quiénes Somos</a>
-        <a href="../admin/index.html">CRUD</a>
-        <a href="#login" class="btn contact-btn">Inicio Sesión</a>
-      </nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#productos">Productos</a>
+  <a href="#services">Servicios</a>
+  <a href="#nosotros">Quiénes Somos</a>
+
+  <!-- Botón CRUD (verificación admin) -->
+  <a href="../CRUD/verify.php"
+     style="font-weight:600; color:#fff; background:#4CAF50; padding:8px 12px; border-radius:6px; text-decoration:none;">
+    CRUD
+  </a>
+
+  <!-- Botones de autenticación (público) -->
+  <a href="../CRUD/auth/login.php" class="btn contact-btn" style="margin-left:10px; text-decoration:none; padding:8px 12px;">
+    🔑 Iniciar Sesión
+  </a>
+  <a href="../CRUD/auth/registro.php" class="btn contact-btn" style="margin-left:8px; text-decoration:none; padding:8px 12px; background:#FF9800; color:#fff; border-radius:6px;">
+    📝 Registrarse
+  </a>
+</nav>
+
 
       <!-- CART: botón del carrito (añadido) -->
       <button id="cart-button" class="cart-btn" aria-label="Ver carrito">
