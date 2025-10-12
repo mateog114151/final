@@ -5,7 +5,8 @@ $stmt = $conexion->query("SELECT id,nombre,descripcion,precio,precio_descuento,c
 $productos = $stmt->fetch_all(MYSQLI_ASSOC);
 ?>
 <!doctype html><html lang="es"><head><meta charset="utf-8"><title>Productos</title>
-<style>body{font-family:Arial;background:#f9f9f9;padding:30px}table{width:95%;margin:auto;border-collapse:collapse}th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#333;color:#fff}a.btn{padding:6px 10px;background:#2196F3;color:#fff;border-radius:5px;text-decoration:none;margin-right:6px}a.danger{background:#d9534f}</style>
+<link rel="stylesheet" href="../Public/css/crud-styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head><body>
 <div style="text-align:right;margin-bottom:10px">
     <span>👋 <?= htmlspecialchars($_SESSION['admin_nombre']) ?></span>

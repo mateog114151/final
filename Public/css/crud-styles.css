@@ -1,0 +1,135 @@
+/* ===============================
+   Estilos CRUD - Tema Happy Pets
+   =============================== */
+
+/* Fondo general */
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 0;
+  padding: 40px;
+  background-image: url('../img/paws-bg.png'); /* opcional: fondo decorativo */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Contenedor principal */
+form {
+  background: white;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #4CAF50;
+}
+
+/* Títulos */
+h2, h3 {
+  text-align: center;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Inputs */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Botones */
+button, .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+button:hover, .btn:hover {
+  background-color: #45a049;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: #4CAF50;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #388e3c;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Mensajes de error y éxito */
+.err {
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.success {
+  color: #27ae60;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Botones secundarios */
+.btn-secondary {
+  background-color: #2196F3;
+}
+.btn-secondary:hover {
+  background-color: #1976D2;
+}
+
+/* Botón eliminar */
+.btn-danger {
+  background-color: #e74c3c;
+}
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Centrados */
+.center {
+  text-align: center;
+}
+
+/* Contenedor CRUD */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}

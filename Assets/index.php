@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="es">
 
@@ -30,22 +33,18 @@
   <a href="#productos">Productos</a>
   <a href="#services">Servicios</a>
   <a href="#nosotros">Quiénes Somos</a>
+  <a href="../CRUD/verify.php">CRUD</a>
 
-  <!-- Botón CRUD (verificación admin) -->
-  <a href="../CRUD/verify.php"
-     style="font-weight:600; color:#fff; background:#4CAF50; padding:8px 12px; border-radius:6px; text-decoration:none;">
-    CRUD
-  </a>
-
-  <!-- Botones de autenticación (público) -->
-  <a href="../CRUD/auth/login.php" class="btn contact-btn" style="margin-left:10px; text-decoration:none; padding:8px 12px;">
-    🔑 Iniciar Sesión
-  </a>
-  <a href="../CRUD/auth/registro.php" class="btn contact-btn" style="margin-left:8px; text-decoration:none; padding:8px 12px; background:#FF9800; color:#fff; border-radius:6px;">
-    📝 Registrarse
-  </a>
+  <?php if (!isset($_SESSION['usuario_id'])): ?>
+      <!-- Si no hay sesión iniciada -->
+      <a href="../CRUD/auth/login.php" class="btn contact-btn">Iniciar Sesión</a>
+      <a href="../CRUD/auth/registro.php" class="btn contact-btn">Registrarse</a>
+  <?php else: ?>
+      <!-- Si hay sesión iniciada -->
+      <span style="color:white; font-weight:bold;">Hola, <?= htmlspecialchars($_SESSION['usuario_nombre']) ?> 👋</span>
+      <a href="../CRUD/auth/logout.php" class="btn contact-btn" style="background:red;">Cerrar Sesión</a>
+  <?php endif; ?>
 </nav>
-
 
       <!-- CART: botón del carrito (añadido) -->
       <button id="cart-button" class="cart-btn" aria-label="Ver carrito">

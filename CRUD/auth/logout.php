@@ -2,5 +2,6 @@
 session_start();
 $_SESSION = [];
 session_destroy();
-header("Location: login.php");
+// Volver a la página pública principal
+header("Location: ../../assets/index.php");
 exit;
