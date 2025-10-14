@@ -10,12 +10,10 @@ if (!$prod) { header("Location: index.php"); exit; }
 <!doctype html><html lang="es"><head>
   <meta charset="utf-8">
   <title>Panel - Happy Pets</title>
-<link rel="stylesheet" href="/happy_pets/styles.css">
+<!-- ✅ CSS corregido -->
 <link rel="stylesheet" href="/happy_pets/crud-styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-  <!-- fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head><body>
 <h2 style="text-align:center">Editar Producto</h2>
 <form action="update.php" method="post">

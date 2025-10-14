@@ -9,12 +9,10 @@ $servicios = $stmt->fetch_all(MYSQLI_ASSOC);
 <head>
   <meta charset="utf-8">
   <title>CRUD Servicios - Happy Pets</title>
-
-  <!-- 📌 Enlace al CSS correcto (raíz del proyecto) -->
-  <link rel="stylesheet" href="/happy_pets/crud-styles.css">
-
-  <!-- Íconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- ✅ CSS corregido -->
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">Actualizar
 </head>
 
 <body>
