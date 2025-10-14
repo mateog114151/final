@@ -41,12 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="utf-8">
   <title>Login - Happy Pets</title>
-  <link rel="stylesheet" href="../../Public/css/crud-styles.css">
-<!-- hoja base del sitio -->
-  <link rel="stylesheet" href="../../Public/css/styles.css">
+  <<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <!-- ajustes específicos CRUD -->
-  <link rel="stylesheet" href="../../Public/css/crud-styles.css">
 
   <!-- fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">

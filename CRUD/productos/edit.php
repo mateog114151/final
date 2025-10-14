@@ -10,12 +10,9 @@ if (!$prod) { header("Location: index.php"); exit; }
 <!doctype html><html lang="es"><head>
   <meta charset="utf-8">
   <title>Panel - Happy Pets</title>
-
-  <!-- hoja base del sitio -->
-  <link rel="stylesheet" href="../Public/css/styles.css">
-
-  <!-- ajustes específicos CRUD -->
-  <link rel="stylesheet" href="../Public/css/crud-styles.css">
+<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!-- fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">

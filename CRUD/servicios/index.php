@@ -5,7 +5,10 @@ $stmt = $conexion->query("SELECT id,nombre,descripcion,precio,duracion,caracteri
 $servicios = $stmt->fetch_all(MYSQLI_ASSOC);
 ?>
 <!doctype html><html lang="es"><head><meta charset="utf-8"><title>Servicios</title>
-<style>body{font-family:Arial;background:#f9f9f9;padding:30px}table{width:95%;margin:auto;border-collapse:collapse}th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#333;color:#fff}a.btn{padding:6px 10px;background:#2196F3;color:#fff;border-radius:5px;text-decoration:none;margin-right:6px}a.danger{background:#d9534f}</style>
+<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head><body>
 <div style="text-align:right;margin-bottom:10px">
     <span>👋 <?= htmlspecialchars($_SESSION['admin_nombre']) ?></span>

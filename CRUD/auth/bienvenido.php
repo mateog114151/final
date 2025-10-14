@@ -3,7 +3,9 @@ session_start();
 if (!isset($_SESSION['usuario_id'])) header("Location: login.php");
 ?>
 <!doctype html><html lang="es"><head><meta charset="utf-8"><title>Bienvenido</title>
-<link rel="stylesheet" href="../Public/css/crud-styles.css">
+<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head><body>
 <h1>Bienvenido, <?= htmlspecialchars($_SESSION['usuario_nombre'] ?? ''); ?></h1>

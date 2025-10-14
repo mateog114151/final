@@ -50,12 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="utf-8">
   <title>CRUD Productos - Happy Pets</title>
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Enlaces correctos a tus estilos -->
-  <link rel="stylesheet" href="/happy_pets/styles.css">
-  <link rel="stylesheet" href="/happy_pets/crud-styles.css">
+  <<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!-- Íconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

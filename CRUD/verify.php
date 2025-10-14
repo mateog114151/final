@@ -36,14 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!doctype html>
 <html lang="es">
 <head><meta charset="utf-8"><title>Verificación CRUD</title>
-<style>
- body{font-family:Arial;background:#f4f4f4;padding:50px}
- form{background:#fff;padding:20px;width:360px;margin:auto;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.08)}
- input{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:4px}
- button{background:#4CAF50;color:#fff;padding:10px;border:0;border-radius:5px;cursor:pointer}
- .err{color:#c00;margin-bottom:8px}
- a {display:block;text-align:center;margin-top:10px;color:#2196F3}
-</style>
+<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
 <h2 style="text-align:center">Verificación para CRUD (Admin)</h2>

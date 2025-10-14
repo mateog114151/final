@@ -1,7 +1,9 @@
 
 <?php require_once __DIR__ . '/../auth/validar_admin.php'; ?>
 <!doctype html><html lang="es"><head><meta charset="utf-8"><title>Nuevo Servicio</title>
-<style>body{font-family:Arial;background:#f4f4f4;padding:40px}form{background:#fff;padding:20px;width:600px;margin:auto;border-radius:8px}input,textarea{width:100%;padding:8px;margin:8px 0}button{background:#4CAF50;color:#fff;padding:10px;border:0;border-radius:5px}</style>
+<link rel="stylesheet" href="/happy_pets/styles.css">
+<link rel="stylesheet" href="/happy_pets/crud-styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head><body>
 <h2 style="text-align:center">Nuevo Servicio</h2>
 <form action="store.php" method="post">
