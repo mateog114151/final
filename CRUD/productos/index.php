@@ -10,26 +10,29 @@ $productos = $stmt->fetch_all(MYSQLI_ASSOC);
   <meta charset="utf-8">
   <title>CRUD Productos - Happy Pets</title>
 
-<link rel="stylesheet" href="../../Public/css/styles.css">
-<link rel="stylesheet" href="../../Public/css/crud-styles.css">
-
+  <!-- ✅ Enlace CSS correcto -->
+  <link rel="stylesheet" href="/happy_pets/crud-styles.css">
 
   <!-- Íconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <div class="hp-crud-header">
-    <div class="left">
+  <header class="hp-crud-header">
+  <div class="container-header">
+    <div class="logo-section">
       <img class="logo" src="/happy_pets/Public/img/WhatsApp Image 2025-09-16 at 7.23.51 PM.jpeg" alt="Happy Pets Logo">
-      <div class="brand">Happy Pets - Admin</div>
+      <h1>Panel de Administración</h1>
     </div>
-    <div class="actions">
-      <a href="/happy_pets/assets/index.php" class="btn-home">Volver al sitio</a>
-      <a href="/happy_pets/CRUD/servicios/index.php" class="btn">CRUD Servicios</a>
-      <a href="/happy_pets/CRUD/auth/logout.php" class="btn-logout">Cerrar sesión</a>
-    </div>
+    <nav class="nav-header">
+      <a href="/happy_pets/Assets/index.php" class="btn-nav">Volver al sitio</a>
+      <a href="/happy_pets/CRUD/servicios/index.php" class="btn-nav">CRUD Servicios</a>
+      <a href="/happy_pets/CRUD/auth/logout.php" class="btn-nav logout">Cerrar sesión</a>
+    </nav>
   </div>
+</header>
+
+
 
   <main>
     <h2>Productos Registrados</h2>

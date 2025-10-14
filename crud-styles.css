@@ -1,0 +1,167 @@
+/* ==== REFINADO VISUAL GENERAL ==== */
+
+/* Fondo general */
+body {
+  background: linear-gradient(180deg, #ffd6e8 0%, #ffe6f0 50%, #fff 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* === ENCABEZADO PRINCIPAL === */
+.hp-crud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #ff7eb3, #ff4fa7);
+  padding: 15px 40px;
+  border-radius: 0 0 25px 25px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 100, 150, 0.3);
+}
+
+.hp-crud-header .logo {
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.hp-crud-header .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hp-crud-header .brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.hp-crud-header .actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hp-crud-header a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.hp-crud-header a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* === BOTÓN NUEVO PRODUCTO / SERVICIO === */
+.crud-header-actions {
+  text-align: center;
+  margin: 35px 0 20px;
+}
+
+.crud-header-actions .btn-switch {
+  background: linear-gradient(135deg, #ff8fc1, #ff4f9e);
+  border-radius: 50px;
+  padding: 12px 28px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.35);
+  transition: all 0.3s ease;
+}
+
+.crud-header-actions .btn-switch:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #ff4f9e, #ff8fc1);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.5);
+}
+
+/* === TABLA === */
+table {
+  width: 90%;
+  margin: 0 auto 60px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 6px 25px rgba(255, 100, 150, 0.2);
+}
+
+thead th {
+  background: linear-gradient(135deg, #ff99c8, #ffb6d9);
+  color: white;
+  padding: 14px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ffe1ec;
+  font-size: 0.95rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fff6fa;
+}
+
+tbody tr:hover {
+  background-color: #ffeaf3;
+  transition: 0.3s;
+}
+
+/* === BOTONES DE ACCIÓN (EDITAR / ELIMINAR) === */
+table td .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  margin: 3px;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 10px rgba(255, 100, 150, 0.25);
+}
+
+table td .btn i {
+  font-size: 0.85rem;
+}
+
+/* Editar */
+table td .btn {
+  background: linear-gradient(135deg, #ff8fc1, #ff4f9e);
+}
+table td .btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #ff4f9e, #ff8fc1);
+}
+
+/* Eliminar */
+table td .btn-danger {
+  background: linear-gradient(135deg, #ff4d6d, #ff7a92);
+}
+table td .btn-danger:hover {
+  background: linear-gradient(135deg, #ff6b81, #ff98a8);
+  transform: translateY(-2px);
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff7eb3, #ff9ecf);
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 15px rgba(255, 105, 180, 0.2);
+}
