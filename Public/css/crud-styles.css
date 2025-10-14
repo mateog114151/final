@@ -1,99 +1,189 @@
-/* crud-styles.css
-   Overrides y utilidades para integrar la CRUD con el tema Happy Pets
-   (Se asume que Public/css/styles.css ya define la paleta y fuentes principales)
-*/
+/* === CRUD ESTILO HAPPY PETS === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
-/* Variables base (si tu styles.css no define variables, éstas sirven) */
-:root{
-  --hp-accent: #4CAF50;
-  --hp-accent-dark: #3a9a46;
-  --hp-primary: #2c3e50;
-  --hp-muted: #666;
-  --hp-card-bg: #ffffff;
-  --hp-page-bg: #f9fafb;
+:root {
+  --color-primary: #4CAF50;
+  --color-secondary: #2e7d32;
+  --color-bg: #f7f8fa;
+  --color-text: #333;
+  --color-white: #fff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --transition: 0.3s ease;
 }
 
-/* Fondo y contenedor base para páginas CRUD */
 body {
-  background: var(--hp-page-bg);
   font-family: 'Playfair Display', serif;
-  color: var(--hp-primary);
+  background: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
-  padding: 28px;
+  padding: 0;
 }
 
-/* Header común CRUD */
-.hp-crud-header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  max-width:1100px;
-  margin: 0 auto 24px auto;
-  padding: 10px 16px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-  border-left: 6px solid var(--hp-accent);
+/* === NAVBAR / HEADER CRUD === */
+header {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
 }
-.hp-crud-header .left {display:flex;align-items:center;gap:12px}
-.hp-crud-header img.logo{height:48px;border-radius:8px;object-fit:cover}
-.hp-crud-header .brand {font-weight:700;font-size:18px;color:var(--hp-primary)}
-.hp-crud-header .actions {display:flex;gap:10px;align-items:center}
-.hp-crud-header .actions a.btn {padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600}
-.hp-crud-header .actions .btn-logout {background:#e74c3c;color:white}
-.hp-crud-header .actions .btn-home {background:var(--hp-accent);color:white}
 
-/* Formularios */
-.form-card {
-  background: var(--hp-card-bg);
-  max-width:760px;
-  margin: 14px auto;
-  padding: 22px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(20,20,20,0.04);
-  border-top: 6px solid var(--hp-accent);
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
-.form-card h2 {margin-top:0;color:var(--hp-primary);text-align:left}
-.form-row {display:block;margin-bottom:12px}
-label {display:block;margin-bottom:6px;color:var(--hp-muted);font-weight:600}
-input[type="text"], input[type="email"], input[type="number"], input[type="password"], select, textarea {
-  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #ddd; box-sizing:border-box;
-  font-size:15px;
+
+header a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+  transition: var(--transition);
 }
-button, .btn {
-  background: var(--hp-accent);
-  border: none;
+
+header a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: var(--color-white);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h2, h3 {
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* === BOTÓN CAMBIO ENTRE CRUD === */
+.crud-header-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.btn-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.btn-switch:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* === TABLAS === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+tbody tr:hover {
+  background: #f1f1f1;
+  transition: var(--transition);
+}
+
+/* === BOTONES CRUD === */
+.btn {
+  background: var(--color-primary);
   color: white;
-  padding: 10px 14px;
-  border-radius: 8px;
+  border: none;
+  padding: 8px 15px;
+  border-radius: var(--radius);
   cursor: pointer;
-  font-weight:700;
-}
-button.secondary, .btn.secondary { background: #2196F3; }
-button.danger, .btn.danger { background: #e74c3c; }
-
-/* Tablas */
-.table-card { background:var(--hp-card-bg); padding:14px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.03); margin:12px auto; max-width:1100px; }
-table.hp-table { width:100%; border-collapse:collapse; font-size:14px; }
-.hp-table th, .hp-table td { padding:10px 8px; border-bottom:1px solid #eee; text-align:left; vertical-align:middle; }
-.hp-table th { background: var(--hp-accent); color: #fff; font-weight:700; }
-.hp-table tr:nth-child(even) td { background: #fbfbfb; }
-
-/* Acciones pequeñas */
-.action-btn { padding:6px 8px; border-radius:7px; font-weight:700; text-decoration:none; color:#fff; display:inline-block; margin-right:6px }
-.action-btn.edit { background:#2196F3 }
-.action-btn.delete { background:#e74c3c }
-
-/* Mensajes */
-.msg { padding:10px 12px; border-radius:8px; margin:8px 0; max-width:760px; margin-left:auto; margin-right:auto; text-align:center }
-.msg.error { background:#fdecea; color:#a94442; border:1px solid #f5c6cb }
-.msg.success { background:#edf7ed; color:#2d7a2d; border:1px solid #c7e6c7 }
-
-/* Responsive */
-@media (max-width:800px) {
-  .hp-crud-header { padding:10px; flex-direction:column; gap:8px; align-items:flex-start }
-  .hp-crud-header img.logo {height:42px}
-  .form-card, .table-card { padding:14px; margin:12px; }
+  transition: var(--transition);
+  font-weight: 600;
 }
 
+.btn:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: #e53935;
+}
+
+.btn-danger:hover {
+  background: #b71c1c;
+}
+
+/* === FORMULARIOS === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* === FOOTER CRUD === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  margin-top: 30px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: #666;
+}

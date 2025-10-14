@@ -12,6 +12,7 @@ $servicios = $stmt->fetch_all(MYSQLI_ASSOC);
     <a href="../auth/logout.php" style="margin-left:12px;background:red;color:#fff;padding:6px 10px;border-radius:4px;text-decoration:none;">Cerrar sesión</a>
 </div>
 <h2 style="text-align:center">Servicios</h2>
+<a href="../productos/index.php"><i class="fa-solid fa-paw"></i> CRUD Productos</a>
 <p style="text-align:center"><a href="create.php" class="btn">+ Nuevo Servicio</a></p>
 <table>
 <tr><th>ID</th><th>Nombre</th><th>Descripción</th><th>Precio</th><th>Duración</th><th>Características</th><th>Creado</th><th>Acciones</th></tr>
