@@ -344,6 +344,51 @@ table td .btn-danger:hover {
   box-shadow: 0 6px 18px rgba(255, 77, 109, 0.5);
 }
 
+/* === BOTÓN VOLVER AL INICIO === */
+.btn-home-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, var(--secondary-pink), var(--primary-pink));
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 100, 150, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-home-top::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+}
+
+.btn-home-top:hover::before {
+  width: 250px;
+  height: 250px;
+}
+
+.btn-home-top:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 100, 150, 0.5);
+}
+
+.btn-home-top i {
+  position: relative;
+  z-index: 1;
+}
+
 /* === FORMULARIOS === */
 form {
   max-width: 600px;

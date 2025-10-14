@@ -1,5 +1,7 @@
+<!-- ============================================ -->
+<!-- CRUD/auth/registro.php -->
+<!-- ============================================ -->
 <?php
-// Activar errores para depuración
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -17,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
         $err = "Correo no válido.";
     } else {
-        // Verificar duplicado
         $s = $conexion->prepare("SELECT id FROM usuarios WHERE correo = ?");
         if (!$s) {
             $err = "Error en la consulta: " . $conexion->error;
@@ -30,8 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $err = "Correo ya registrado.";
             } else {
                 $hash = password_hash($pass, PASSWORD_DEFAULT);
-
-                // INSERT
                 $ins = $conexion->prepare("INSERT INTO usuarios (nombre_usuario, correo, contraseña, rol) VALUES (?, ?, ?, 'usuario')");
                 
                 if (!$ins) {
@@ -40,13 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $ins->bind_param("sss", $nombre, $correo, $hash);
 
                     if ($ins->execute()) {
-                        // Auto-login
                         $_SESSION['usuario_id'] = $conexion->insert_id;
                         $_SESSION['usuario_nombre'] = $nombre;
                         $_SESSION['usuario_rol'] = 'usuario';
-
-                        // IMPORTANTE: Verificar que esta ruta exista
-                        // Cambiar a minúsculas si tu carpeta se llama "assets"
                         header("Location: ../../Assets/index.php");
                         exit;
                     } else {
@@ -69,6 +64,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Botón volver al inicio -->
+  <div style="text-align: center; padding: 20px 0;">
+    <a href="/happy_pets/Assets/index.php" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 25px; background: linear-gradient(135deg, #ff8fc1, #ff4f9e); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; box-shadow: 0 4px 15px rgba(255, 100, 150, 0.3); transition: all 0.3s ease;">
+      <i class="fa-solid fa-home"></i> Volver al Inicio
+    </a>
+  </div>
+
   <h2>Crear cuenta</h2>
   <form method="post">
     <?php if($err): ?><div class="err"><?= htmlspecialchars($err) ?></div><?php endif; ?>
@@ -80,3 +83,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   </form>
 </body>
 </html>
+

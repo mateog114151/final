@@ -694,6 +694,6 @@ session_start();
   </footer>
 
 </body>
-<script src="js/scripts.js"></script>
+<script src="../Public/js/scripts.js"></script>
 
 </html>
