@@ -1,9 +1,19 @@
 <?php require_once __DIR__ . '/../auth/validar_admin.php'; ?>
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Nuevo Producto</title>
-<link rel="stylesheet" href="../Public/css/crud-styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<!doctype html><html lang="es"><head>
+  <meta charset="utf-8">
+  <title>Panel - Happy Pets</title>
 
-</head><body>
+  <!-- hoja base del sitio -->
+  <!-- hoja base del sitio -->
+  <link rel="stylesheet" href="../Public/css/styles.css">
+
+  <!-- ajustes específicos CRUD -->
+  <link rel="stylesheet" href="../Public/css/crud-styles.css">
+
+  <!-- fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 <h2 style="text-align:center">Nuevo Producto</h2>
 <form action="store.php" method="post">
   <label>Nombre</label>

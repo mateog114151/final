@@ -42,8 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="utf-8">
   <title>Login - Happy Pets</title>
   <link rel="stylesheet" href="../../Public/css/crud-styles.css">
-<link rel="stylesheet" href="../../Public/css/crud-styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- hoja base del sitio -->
+  <link rel="stylesheet" href="../../Public/css/styles.css">
+
+  <!-- ajustes específicos CRUD -->
+  <link rel="stylesheet" href="../../Public/css/crud-styles.css">
+
+  <!-- fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <h2 style="text-align:center">Iniciar Sesión</h2>

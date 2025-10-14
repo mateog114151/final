@@ -4,9 +4,18 @@ require_once __DIR__ . '/../config.php';
 $stmt = $conexion->query("SELECT id,nombre,descripcion,precio,precio_descuento,categoria,stock,fecha_creacion FROM productos ORDER BY id DESC");
 $productos = $stmt->fetch_all(MYSQLI_ASSOC);
 ?>
-<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Productos</title>
-<link rel="stylesheet" href="../Public/css/crud-styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<!doctype html><html lang="es"><head>
+  <meta charset="utf-8">
+  <title>Panel - Happy Pets</title>
+
+  <!-- hoja base del sitio -->
+  <link rel="stylesheet" href="../Public/css/styles.css">
+
+  <!-- ajustes específicos CRUD -->
+  <link rel="stylesheet" href="../Public/css/crud-styles.css">
+
+  <!-- fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head><body>
 <div style="text-align:right;margin-bottom:10px">
     <span>👋 <?= htmlspecialchars($_SESSION['admin_nombre']) ?></span>

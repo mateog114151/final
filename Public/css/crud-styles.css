@@ -1,135 +1,99 @@
-/* ===============================
-   Estilos CRUD - Tema Happy Pets
-   =============================== */
+/* crud-styles.css
+   Overrides y utilidades para integrar la CRUD con el tema Happy Pets
+   (Se asume que Public/css/styles.css ya define la paleta y fuentes principales)
+*/
 
-/* Fondo general */
+/* Variables base (si tu styles.css no define variables, éstas sirven) */
+:root{
+  --hp-accent: #4CAF50;
+  --hp-accent-dark: #3a9a46;
+  --hp-primary: #2c3e50;
+  --hp-muted: #666;
+  --hp-card-bg: #ffffff;
+  --hp-page-bg: #f9fafb;
+}
+
+/* Fondo y contenedor base para páginas CRUD */
 body {
+  background: var(--hp-page-bg);
   font-family: 'Playfair Display', serif;
-  background-color: #f9fafb;
-  color: #333;
+  color: var(--hp-primary);
   margin: 0;
-  padding: 40px;
-  background-image: url('../img/paws-bg.png'); /* opcional: fondo decorativo */
-  background-size: contain;
-  background-repeat: no-repeat;
+  padding: 28px;
 }
 
-/* Contenedor principal */
-form {
-  background: white;
-  max-width: 420px;
-  margin: 0 auto;
-  padding: 25px 30px;
+/* Header común CRUD */
+.hp-crud-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  max-width:1100px;
+  margin: 0 auto 24px auto;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.85), rgba(255,255,255,0.6));
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  border-left: 6px solid var(--hp-accent);
+}
+.hp-crud-header .left {display:flex;align-items:center;gap:12px}
+.hp-crud-header img.logo{height:48px;border-radius:8px;object-fit:cover}
+.hp-crud-header .brand {font-weight:700;font-size:18px;color:var(--hp-primary)}
+.hp-crud-header .actions {display:flex;gap:10px;align-items:center}
+.hp-crud-header .actions a.btn {padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600}
+.hp-crud-header .actions .btn-logout {background:#e74c3c;color:white}
+.hp-crud-header .actions .btn-home {background:var(--hp-accent);color:white}
+
+/* Formularios */
+.form-card {
+  background: var(--hp-card-bg);
+  max-width:760px;
+  margin: 14px auto;
+  padding: 22px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-top: 5px solid #4CAF50;
+  box-shadow: 0 6px 18px rgba(20,20,20,0.04);
+  border-top: 6px solid var(--hp-accent);
 }
-
-/* Títulos */
-h2, h3 {
-  text-align: center;
-  color: #2c3e50;
-  font-weight: bold;
+.form-card h2 {margin-top:0;color:var(--hp-primary);text-align:left}
+.form-row {display:block;margin-bottom:12px}
+label {display:block;margin-bottom:6px;color:var(--hp-muted);font-weight:600}
+input[type="text"], input[type="email"], input[type="number"], input[type="password"], select, textarea {
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #ddd; box-sizing:border-box;
+  font-size:15px;
 }
-
-/* Inputs */
-input, select, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-  box-sizing: border-box;
-  transition: border 0.3s ease;
-}
-input:focus, select:focus, textarea:focus {
-  border-color: #4CAF50;
-  outline: none;
-}
-
-/* Botones */
 button, .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 15px;
+  background: var(--hp-accent);
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-  transition: background 0.3s ease;
-}
-button:hover, .btn:hover {
-  background-color: #45a049;
-}
-
-/* Enlaces */
-a {
-  text-decoration: none;
-  color: #4CAF50;
-  transition: color 0.3s ease;
-}
-a:hover {
-  color: #388e3c;
-}
-
-/* Tabla */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 25px;
-}
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-th {
-  background-color: #4CAF50;
   color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight:700;
 }
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+button.secondary, .btn.secondary { background: #2196F3; }
+button.danger, .btn.danger { background: #e74c3c; }
+
+/* Tablas */
+.table-card { background:var(--hp-card-bg); padding:14px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.03); margin:12px auto; max-width:1100px; }
+table.hp-table { width:100%; border-collapse:collapse; font-size:14px; }
+.hp-table th, .hp-table td { padding:10px 8px; border-bottom:1px solid #eee; text-align:left; vertical-align:middle; }
+.hp-table th { background: var(--hp-accent); color: #fff; font-weight:700; }
+.hp-table tr:nth-child(even) td { background: #fbfbfb; }
+
+/* Acciones pequeñas */
+.action-btn { padding:6px 8px; border-radius:7px; font-weight:700; text-decoration:none; color:#fff; display:inline-block; margin-right:6px }
+.action-btn.edit { background:#2196F3 }
+.action-btn.delete { background:#e74c3c }
+
+/* Mensajes */
+.msg { padding:10px 12px; border-radius:8px; margin:8px 0; max-width:760px; margin-left:auto; margin-right:auto; text-align:center }
+.msg.error { background:#fdecea; color:#a94442; border:1px solid #f5c6cb }
+.msg.success { background:#edf7ed; color:#2d7a2d; border:1px solid #c7e6c7 }
+
+/* Responsive */
+@media (max-width:800px) {
+  .hp-crud-header { padding:10px; flex-direction:column; gap:8px; align-items:flex-start }
+  .hp-crud-header img.logo {height:42px}
+  .form-card, .table-card { padding:14px; margin:12px; }
 }
 
-/* Mensajes de error y éxito */
-.err {
-  color: #e74c3c;
-  text-align: center;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-.success {
-  color: #27ae60;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Botones secundarios */
-.btn-secondary {
-  background-color: #2196F3;
-}
-.btn-secondary:hover {
-  background-color: #1976D2;
-}
-
-/* Botón eliminar */
-.btn-danger {
-  background-color: #e74c3c;
-}
-.btn-danger:hover {
-  background-color: #c0392b;
-}
-
-/* Centrados */
-.center {
-  text-align: center;
-}
-
-/* Contenedor CRUD */
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
